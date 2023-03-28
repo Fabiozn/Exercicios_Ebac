@@ -2,7 +2,7 @@
 
 Checkout
 
-Funcionalidade: configuração tela tamanho cor e quantidade
+Funcionalidade: chekout
 Como cliente da Ebac-shop
 Quero validar e fazer login na plataforma
 para visualizar meus pedidos
@@ -15,6 +15,6 @@ Então deve ser direcionada para a tela check out
 
 Cenário: login invalido
 Dados Ao inserir um dos campos inválidos deve exibir uma mensagem de alerta “Usuário ou senha inválidos
-Quando digitar e-mail invalido
-E digitar senha invalida
+Quando digitar e-mail  "jose321@ebac.com.br" 
+E senha ebcs321
 Então deve aparecer a mensagem "Usuário ou senha invalidos"
