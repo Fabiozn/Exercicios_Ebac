@@ -17,7 +17,11 @@ Cenário: login invalido
 Dados Ao inserir um dos campos inválidos deve exibir uma mensagem de alerta “Usuário ou senha inválidos
 Quando digitar e-mail  "jose321@ebac.com.br" 
 E senha ebcs321
-Então deve aparecer a mensagem "Usuário ou senha invàlidos"
+Então deve aparecer a mensagem "Usuário ou senha invàlidos
+
+ Esquema do Cenário: validar autenticação invalida
+                     Quando inserir <usuário> e <senha> 
+                     Então deve exibir uma <Mensagem> de erro
 
 
        Exemplo:
