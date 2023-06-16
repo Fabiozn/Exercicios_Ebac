@@ -16,8 +16,11 @@
 							"pm.test(\"Status code é 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"pm.test(\"Confirmação de lista\", function () {\r",
+							"pm.test(\"Confirmação de usuário\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"fabinho@qa.com\");\r",
+							"});\r",
+							"pm.test(\"Nome incorreto\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"fsbio@qa.com\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -58,10 +61,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code é 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
 							"\r",
+							"\r",
+							"pm.test(\"Mensagem de sucesso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
+							"});\r",
+							"pm.test(\"Mensagem de erro\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Este email já está sendo usado\");\r",
+							"});\r",
 							""
 						],
 						"type": "text/javascript"
@@ -73,7 +80,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "\t\r\n\r\n{\r\n  \"nome\": \"Fabio de Oliveira\",\r\n  \"email\": \"fabinho@qa.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+					"raw": "\t\r\n{\r\n  \"nome\": \"Fabio de Oliveira\",\r\n  \"email\": \"fabinho@qa.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
